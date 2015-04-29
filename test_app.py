@@ -13,7 +13,6 @@ class Connect(object):
   def _connect_mysql(cls, conn_type='ro'):
     prefix = '%s_' % conn_type
     if cls.adb is None:
-      #print "Initializing adb"
       cls.adb = adb.Database(driver="MySQLdb", database="test_db", user="user", password="password", host="localhost")
 
   @classmethod
